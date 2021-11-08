@@ -1,4 +1,14 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+    padding-top: 10px;
+    position: fixed;
+    z-index: 99;
+    background: #fff;
+    width: 100%;
+    
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+  }

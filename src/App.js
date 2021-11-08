@@ -12,6 +12,7 @@ import { Homepage } from './components/views/Homepage/Homepage';
 import { Product } from './components/views/Product/Product';
 import { Shop } from './components/views/Shop/Shop';
 import { Cart } from './components/views/Cart/Cart';
+import { About } from './components/views/About/About';
 import { NotFound } from './components/views/NotFound/NotFound';
 import { NoPermission } from './components/views/NoPermission/NoPermission';
 
@@ -33,6 +34,7 @@ const App = () => (
               <Route exact path='/product/:id' component={Product} />
               <Route exact path='/shop' component={Shop} />
               <Route exact path='/cart' component={Cart} />
+              <Route exact path='/about' component={About} />
               <Route exact path='/no-permission' component={NoPermission} />
               <Route path='*' component={NotFound} />
             </Switch>
