@@ -18,17 +18,17 @@
   }
 
   &:hover:before{
-    border-top: 10px solid $colorGreen;
+    border-top: 10px solid $colorActiveGreen;
   }
 
   &:hover{
-    color: $colorGreen;
+    color: $colorActiveGreen;
   }
 }
 .active{
 
   &::before{
-    border-top: 10px solid $colorActiveGreen;
+    border-top: 10px solid $colorGreen;
     content: "";
     width: 100%;
     display: inline-block;

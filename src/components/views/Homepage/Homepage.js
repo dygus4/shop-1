@@ -25,12 +25,24 @@ const Component = ({className, children}) => {
 
       <Slider {...settings} className={styles.slider}>
         <div className={styles.imageWrapper}>
-          <img  alt= '' src='https://images.pexels.com/photos/331990/pexels-photo-331990.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'></img>
-          <h4>Creative</h4>
+          <img  alt= '' src='https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'></img>
+          <div className={styles.title}> Electric Car </div>
         </div>
         <div className={styles.imageWrapper}>
-          <img  alt= '' src='https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'></img>
-          <h4>Nice</h4>
+          <img  alt= '' src='https://images.pexels.com/photos/9800006/pexels-photo-9800006.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'></img>
+          <div className={styles.title}> Quick Charge </div>
+        </div>
+        <div className={styles.imageWrapper}>
+          <img  alt= '' src='https://images.pexels.com/photos/2480315/pexels-photo-2480315.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'></img>
+          <div className={styles.title}> A lot of place charging</div>
+        </div>
+        <div className={styles.imageWrapper}>
+          <img  alt= '' src='https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'></img>
+          <div className={styles.title}> Renewable Energy</div>
+        </div>
+        <div className={styles.imageWrapper}>
+          <img  alt= '' src='https://images.pexels.com/photos/315938/pexels-photo-315938.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'></img>
+          <div className={styles.title}> Innovation</div>
         </div>
       </Slider>
       <div className={styles.sliderContent}>
@@ -38,20 +50,21 @@ const Component = ({className, children}) => {
           <div className={styles.topContent}>
             <h1>WELCOME TO ELECTRIC CAR SHOP</h1>
           </div>
-          <div className={styles.bottomContent}>
-            <Button
-              className={styles.button}
-              variant='contained'
-              color='primary'
-              component={Link}
-              to={'/shop'}
-            >
-            START SHOPPING
-            </Button>
-            
-          </div>
+          
         </div>
 
+      </div>
+      <div className={styles.bottomContent}>
+        <Button
+          className={styles.button}
+          variant='contained'
+          color='primary'
+          component={Link}
+          to={'/shop'}
+        >
+            START SHOPPING
+        </Button>
+            
       </div>
     </div>
     

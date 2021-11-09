@@ -2,7 +2,7 @@
 
 .root {
     padding-top: 70px;
-  
+    height: 870px;
     .slider {
       position: relative;
   
@@ -39,23 +39,27 @@
         height: 100%;
         object-fit: cover;
       }
-      h4 {
-        z-index: 999;
+      .title {
+        z-index: 1000;
         text-align: center;
         font-size: 40px;
         font-family:'Lucida Sans';
-        top: 40px;
+        display: flex;
+        justify-content: center;
+        transform: translate(0%, -300%);
+        color: #fff;
+        font-weight: 700;
       }
     }
 
     .sliderContent {
         position: absolute;
-        top: 50%;
+        top: 20%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 999;
-        width: 700px;
-        height: 350px;
+        z-index: 998;
+        width: 600px;
+        height: 150px;
         background: rgba(255, 255, 255, 0.8);
         display: flex;
         justify-content: center;
@@ -74,23 +78,30 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-bottom: 3px solid $colorBlack;
+            
     
             h1 {
               margin: 0;
             }
           }
-          .bottomContent {
-            height: 40%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-    
-            
-    
-           
-          }
+        }
+     }
+     .bottomContent {
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translate(0%, -450%);
+      
+      .button {
+        font-size: 40px;
+        background-color: rgba(49, 199, 29, 0.8);
+        font-family: cursive;
+        &:hover{
+          background-color: $colorActiveGreen;
         }
       }
+
+     
     }
+  }
