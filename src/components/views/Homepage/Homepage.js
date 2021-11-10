@@ -33,7 +33,7 @@ const Component = ({className, children}) => {
           <div className={styles.title}> Quick Charge </div>
         </div>
         <div className={styles.imageWrapper}>
-          <img  alt= '' src='https://images.pexels.com/photos/2480315/pexels-photo-2480315.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'></img>
+          <img  alt= '' src='https://images.pexels.com/photos/258083/pexels-photo-258083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'></img>
           <div className={styles.title}> A lot of place charging</div>
         </div>
         <div className={styles.imageWrapper}>
