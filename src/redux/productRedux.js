@@ -1,18 +1,19 @@
+//import Axios from 'axios';
 /* selectors */
-export const getAll = ({posts}) => posts.data;
+export const getAll = ({products}) => products.data;
 
 /* action name creator */
-const reducerName = 'posts';
+const reducerName = 'products';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */
 const FETCH_START = createActionName('FETCH_START');
-const FETCH_SUCCESS = createActionName('FETCH_SUCCESS');
+const CHANGE_USER = createActionName('CHANGE_USER');
 const FETCH_ERROR = createActionName('FETCH_ERROR');
 
 /* action creators */
 export const fetchStarted = payload => ({ payload, type: FETCH_START });
-export const fetchSuccess = payload => ({ payload, type: FETCH_SUCCESS });
+export const changeUser = payload => ({ payload, type: CHANGE_USER });
 export const fetchError = payload => ({ payload, type: FETCH_ERROR });
 
 /* thunk creators */
@@ -24,20 +25,20 @@ export const reducer = (statePart = [], action = {}) => {
       return {
         ...statePart,
         loading: {
-          active: true,
-          error: false,
-        },
-      };
-    }
-    case FETCH_SUCCESS: {
-      return {
-        ...statePart,
-        loading: {
           active: false,
           error: false,
         },
         data: action.payload,
       };
+    }
+    case CHANGE_USER: {
+      return {
+        logged: action.payload.logged,
+        email: action.payload.email,
+        name: action.payload.name,
+        id: action.payload.name,
+      };
+        
     }
     case FETCH_ERROR: {
       return {

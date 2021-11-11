@@ -1,6 +1,8 @@
 export const initialState = {
-  posts: {
-    data: {},
+  products: {
+    data: [ 
+      {asd: 'asd'},
+    ],
     loading: {
       active: false,
       error: false,
