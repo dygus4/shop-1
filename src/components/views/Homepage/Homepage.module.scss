@@ -2,7 +2,7 @@
 
 .root {
     padding-top: 70px;
-    height: 870px;
+    //height: 870px;
     .slider {
       position: relative;
   
@@ -103,5 +103,13 @@
       }
 
      
+    }
+    .productsWrapper {
+      h1 {
+        text-align: center;
+        color: $colorGrey;
+        font-weight: 100;
+        margin-bottom: 23px;
+      }
     }
   }

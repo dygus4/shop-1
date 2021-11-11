@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
+import { Box } from '../../features/Box/Box';
 
-
-// import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
+import { connect } from 'react-redux';
+import { getAll } from '../../../redux/productsRedux';
 
 import styles from './Homepage.module.scss';
 
@@ -66,6 +66,10 @@ const Component = ({className, children}) => {
         </Button>
             
       </div>
+      <div className={styles.productsWrapper}>
+        <h1> Our products </h1>
+        <Box />
+      </div>
     </div>
     
   );
@@ -76,18 +80,18 @@ Component.propTypes = {
   className: PropTypes.string,
 };
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
+const mapStateToProps = state => ({
+  products: getAll(state),
+});
 
 // const mapDispatchToProps = dispatch => ({
 //   someAction: arg => dispatch(reduxActionCreator(arg)),
 // });
 
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
+const Container = connect(mapStateToProps)(Component);
 
 export {
-  Component as Homepage,
-  // Container as Homepage,
+  //Component as Homepage,
+  Container as Homepage,
   Component as HomepageComponent,
 };
