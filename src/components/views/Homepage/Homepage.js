@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
@@ -6,11 +6,14 @@ import Button from '@material-ui/core/Button';
 import { Box } from '../../features/Box/Box';
 
 import { connect } from 'react-redux';
-import { getAll } from '../../../redux/productsRedux';
-
+import { getAll, fetchProducts } from '../../../redux/productsRedux';
+import { Container as ContainerPlus } from '@material-ui/core';
 import styles from './Homepage.module.scss';
 
-const Component = ({className, children}) => {
+const Component = ({ products, fetchProducts }) => {
+  useEffect(() => {
+    fetchProducts();
+  }, []);
   const settings = {
     dots: false,
     infinite: true,
@@ -66,29 +69,35 @@ const Component = ({className, children}) => {
         </Button>
             
       </div>
-      <div className={styles.productsWrapper}>
-        <h1> Our products </h1>
-        <Box />
-      </div>
+      <ContainerPlus>
+        <div className={styles.productsWrapper}>
+          <h1> Our products </h1>
+          <div className={styles.boxesWrapper}>
+            {products.map(data => 
+              <Box key={data._id} {...data} />
+            )}
+          </div>
+        </div>
+      </ContainerPlus>
     </div>
     
   );
 };
 
 Component.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
+  products: PropTypes.array,
+  fetchProducts: PropTypes.func,
 };
 
 const mapStateToProps = state => ({
   products: getAll(state),
 });
 
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
+const mapDispatchToProps = dispatch => ({
+  fetchProducts: () => dispatch(fetchProducts()),
+});
 
-const Container = connect(mapStateToProps)(Component);
+const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
   //Component as Homepage,
