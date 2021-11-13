@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './Box.module.scss';
 
-const Component = (data) => {
+const Component = ({ data }) => {
   const [isShown, setIsShown] = useState(false);
   const [isTimer, setTimer] = useState(false);
 

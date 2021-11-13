@@ -1,37 +1,78 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
-
-import clsx from 'clsx';
-
-// import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
+import { connect } from 'react-redux';
+import { getOneProduct, fetchOneProduct} from '../../../redux/productsRedux';
 
 import styles from './Product.module.scss';
+import { Container as ContainerPlus } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import TextField from '@material-ui/core/TextField';
+import { Button } from '@material-ui/core';
 
-const Component = ({className, children}) => (
-  <div className={clsx(className, styles.root)}>
-    <h2>Product</h2>
-    {children}
-  </div>
-);
 
+
+
+const Component = ({ product, fetchOneProduct }) => {
+  useEffect(() => {
+    fetchOneProduct();
+  }, [fetchOneProduct]);
+
+
+  const { image, price, name, text} = product;
+  const [cart, setCart] = React.useState(false);
+
+
+  return (
+    <ContainerPlus>
+      <div className={styles.root}>
+        <div className={styles.link}><Link to='/'>Back to HOME</Link></div>
+        <div className={styles.leftWrapper}>
+          <div className={styles.imageWrapper}>
+            <img src={image} alt=''></img>
+          </div>
+          <div className={styles.textWrapper}>
+            <p>{text}</p>
+          </div>
+        </div>
+        <div className={styles.rightWrapper}>
+          <h1>{name}</h1>
+          <h2>{price}$</h2>
+          <TextField
+            className={styles.quantity}
+            label="Quantity"
+            type="number"
+            defaultValue='1'
+            inputProps={{ min: 1 }}
+            InputLabelProps={{
+              shrink: true,
+            }} />
+          <Button className={styles.btn} onClick={() => setCart(true)}> Add to Card </Button>
+          <Button className={styles.btn}> Buy now </Button>
+        </div>
+      </div>
+    </ContainerPlus>
+
+      
+    
+  );
+};
 Component.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
+  fetchOneProduct: PropTypes.func,
+  product: PropTypes.object,
 };
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
+const mapStateToProps = state => ({
+  product: getOneProduct(state),
+});
 
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
+const mapDispatchToProps = (dispatch, props) => ({
+  fetchOneProduct: () => dispatch(fetchOneProduct(props.match.params.id)),
+});
 
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
+const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  Component as Product,
-  // Container as Product,
+  //Component as Product,
+  Container as Product,
   Component as ProductComponent,
 };
