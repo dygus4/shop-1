@@ -5,11 +5,11 @@ import clsx from 'clsx';
 import { Container } from '@material-ui/core';
 import { NavButton } from '../../common/NavButton/NavButton';
 
-import { NavLink } from 'react-router-dom';
+
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+
 import styles from './Header.module.scss';
 
 const Component = ({className}) => (
@@ -19,7 +19,6 @@ const Component = ({className}) => (
       <NavButton name={'About'} link='/about' />
       <NavButton name={'Shop'} link='/shop' />
       <NavButton name={'Cart'} link='/cart' />
-      <NavLink to='/auth/google' className={styles.btn}><AccountCircleIcon /> LOG IN</NavLink>
     </Container>
   </div>
 );
