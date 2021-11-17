@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Header } from '../Header/Header';
 import { Footer } from '../Footer/Footer';
+import { CartModal } from '../../features/CartModal/CartModal';
 
 
 import clsx from 'clsx';
@@ -15,6 +16,7 @@ const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
     <Header />
     {children}
+    <CartModal />
     <Footer />
   </div>
 );

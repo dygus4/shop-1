@@ -5,10 +5,12 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { initialState } from './initialState';
 import { reducer as productsReducer } from './productsRedux';
 import { reducer as cartReducer } from './cartRedux';
+import { reducer as modalReducer} from './modalRedux';
 // define reducers
 const reducers = {
   products: productsReducer,
   cart: cartReducer,
+  modal: modalReducer,
 };
 
 // add blank reducers for initial state properties without reducers
