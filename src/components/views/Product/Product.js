@@ -9,6 +9,7 @@ import { Container as ContainerPlus } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import TextField from '@material-ui/core/TextField';
 import { Button } from '@material-ui/core';
+import Slider from 'react-slick';
 
 
 
@@ -29,25 +30,37 @@ const Component = ({ product, fetchOneProduct, addModal, addToCart }) => {
     addToCart(output);
   };
 
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+  };
+
   return (
     
     <ContainerPlus>
       <div className={styles.root}>
         <div className={styles.link}><Link to='/'>Back to HOME</Link></div>
         <div className={styles.leftWrapper}>
-          <div className={styles.imageWrapper}>
-            <img src={image} alt=''></img>
-          </div>
-          <div className={styles.imageWrapper}>
-            <img src={image2} alt=''></img>
-          </div>
-          <div className={styles.imageWrapper}>
-            <img src={image3} alt=''></img>
-          </div>
+          <Slider {...settings} className={styles.imageWrapper}>
+            <div>
+              <img src={image} alt=''></img>
+            </div>
+            <div>
+              <img src={image2} alt=''></img>
+            </div>
+            <div>
+              <img src={image3} alt=''></img>
+            </div>
+          </Slider>
           <div className={styles.textWrapper}>
             <p>{text}</p>
           </div>
         </div>
+
         <div className={styles.rightWrapper}>
           <h1>{name}</h1>
           <h2>{price}$</h2>
