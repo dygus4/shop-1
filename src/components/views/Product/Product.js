@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import TextField from '@material-ui/core/TextField';
 import { Button } from '@material-ui/core';
 import Slider from 'react-slick';
+import { v4 as uuidv4 } from 'uuid';
 
 
 
@@ -24,7 +25,7 @@ const Component = ({ product, fetchOneProduct, addModal, addToCart }) => {
 
   const handleAddToCart = () => {
     const output = {
-      image, price, name, quantity,
+      image, price, name, quantity, id: uuidv4(),
     };
     addModal();
     addToCart(output);

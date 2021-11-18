@@ -23,6 +23,10 @@
       //font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     }
   }
+  .cartMain {
+    height: calc(100% - 167px);
+    overflow: auto;
+  }
 
   .cartFooter {
     position: absolute;

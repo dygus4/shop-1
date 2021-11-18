@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
+import { QuantityButton } from '../../common/QuantityButton/QuantityButton';
 
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
@@ -8,7 +8,9 @@ import PropTypes from 'prop-types';
 import styles from './CartBox.module.scss';
 
 const Component = ({ data }) => {
-  const { image, price, name, quantity} = data;
+  const { image, price, name, quantity, id} = data;
+  const [quantityState, setQuantityState] = useState(quantity);
+
   return (
     <div className={styles.root}>
       <div className={styles.leftWrapper}>
@@ -19,6 +21,7 @@ const Component = ({ data }) => {
       <div className={styles.rightWrapper}>
         <h4>{name}</h4>
         <h4>${price}</h4>
+        <QuantityButton quantity={quantityState} setQuantity={setQuantityState} cart={true} id={id} />
       </div>
     </div>
   );
