@@ -1,4 +1,85 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+    padding-top: 130px;
+    min-height: calc(100vh - 50px);
+    display: flex !important;
+    position: relative;
+  
+    
+    h2 {
+      font-weight: 100;
+      border-bottom: 1px solid #bbb;
+      padding-bottom: 10px;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  
+    .leftWrapper {
+      flex: 1;
+      padding-right: 30px;
+    }
+  
+    .rightWrapper {
+      flex: 0.6;
+  
+      .price {
+        display: flex;
+        justify-content: space-between;
+  
+        &:nth-of-type(2) {
+          border-bottom: 1px solid #bbb;
+          padding-bottom: 15px;
+        }
+        &:nth-of-type(3) {
+          font-size: 20px;
+        }
+  
+        p:nth-of-type(2) {
+          font-weight: bold;
+        }
+      }
+      form {
+          padding-top: 15px;
+      }
+  
+  
+      input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #bbb;
+        line-height: 15px;
+        margin-bottom: 5px;
+  
+        &:focus-visible {
+          outline: none;
+        }
+      }
+      .btnWrapper {
+        text-align: center;
+  
+        .btn {
+          margin-top: 30px;
+          width: 200px;
+          padding: 20px 0;
+          cursor: pointer;
+          background: transparent;
+          border-radius: 5px;
+          outline: none;
+          border: 1px solid #bbb;
+          transition: all 0.7s;
+  
+          &:hover {
+            background: $colorGreen;
+            color: $colorWhite;
+          }
+        }
+      }
+    }
+  }
+  
+  .required{
+    color: $colorGreen;
+    text-align: center;
+  } 

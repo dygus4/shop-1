@@ -10,13 +10,15 @@ import styles from './CartModal.module.scss';
 import { Link } from 'react-router-dom';
 
 const Component = ({ removeModal, modalData, cartData, fetchCart }) => {
-  useEffect(() => {
+  useEffect(()=>{
     fetchCart(cartData);
   }, [cartData]);
-
   let price = 0;
-
+  
   cartData.map(data => price += (data.price * data.quantity));
+  
+  
+
   return (
     <Drawer anchor='right' open={modalData} onClose={() => removeModal()} className={styles.cart}>
       <div className={styles.cartHeader}>
@@ -53,7 +55,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   removeModal: () => dispatch(removeModal()),
-  fetchCart: () => dispatch(fetchCart()),
+  fetchCart: (arg) => dispatch(fetchCart(arg)),
 });
 
 const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
