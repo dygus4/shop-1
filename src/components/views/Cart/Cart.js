@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Container as ContainerPlus } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+
 import { connect } from 'react-redux';
 import { getCartData } from '../../../redux/cartRedux';
 import { CartBox } from '../../features/CartBox/CartBox';
