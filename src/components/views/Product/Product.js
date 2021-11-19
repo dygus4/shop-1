@@ -17,7 +17,7 @@ import { v4 as uuidv4 } from 'uuid';
 const Component = ({ product, fetchOneProduct, addModal, addToCart }) => {
   useEffect(() => {
     fetchOneProduct();
-  }, [fetchOneProduct]);
+  }, []);
 
 
   const { image, price, name, text, image2, image3} = product;

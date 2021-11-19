@@ -6,6 +6,7 @@
     justify-content: center;
     padding: 20px;
     position: relative;
+    flex-direction: column;
 
     .closebtn{
       position: absolute;
@@ -26,10 +27,25 @@
         opacity: 0.7;
       }
     }
+    .topWrapper {
+      flex-direction: row;
+      display: flex;
+    }
+    .bottomWrapper {
+      width: 100%;
+      padding-top: 10px;
+      textarea {
+        width: 100%;
+        resize: none;
+        padding: 3px;
+
+      }
+    }
   
     .leftWrapper .imageWrapper{
       width: 130px;
       height: 130px;
+      display: block;
   
       img{
         height: 100%;

@@ -13,7 +13,7 @@ const Component = ({image, name, price, _id, addModal, addToCart}) => {
   const [quantity, setQuantity] = useState(1);
 
   const handleAddToCart = () => {
-    const output = {image, name, price, quantity, id: uuidv4()};
+    const output = {image, name, price, quantity, id: uuidv4(), _id };
 
     addModal();
     addToCart(output);

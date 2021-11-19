@@ -20,24 +20,25 @@
       left: 20px;
       transform: translateY(-50%);
       font-size: 30px;
-      //font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     }
   }
   .cartMain {
-    height: calc(100% - 167px);
+    height: calc(100% - 270px);
     overflow: auto;
-    position: relative;
-
-    .priceWrapper{
-      position: absolute;
+    
+  }
+  .priceWrapper{
+      //position: absolute;
       left: 10px;
-      bottom: 10px;
+      bottom: 120px;
+
 
       h3{
         margin: 10px 0;
+        margin-left: 30px;
       }
-    }
   }
+
 
   .cartFooter {
     position: absolute;
