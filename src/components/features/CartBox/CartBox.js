@@ -8,7 +8,7 @@ import { removeFromCart, changeDescription } from '../../../redux/cartRedux';
 import styles from './CartBox.module.scss';
 
 const Component = ({ data, removeFromCart, changeDescription }) => {
-  const { image, price, name, quantity, id, description, _id} = data;
+  const { image, price, name, quantity, id, description} = data;
   const [quantityState, setQuantityState] = useState(quantity);
   const handleChangeDescription = event => {
     changeDescription({ description: event.target.value, id});

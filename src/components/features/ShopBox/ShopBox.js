@@ -9,6 +9,7 @@ import { addModal } from '../../../redux/modalRedux';
 //import { Button } from '@material-ui/core';
 import { v4 as uuidv4 } from 'uuid';
 
+
 const Component = ({image, name, price, _id, addModal, addToCart}) => {
   const [quantity, setQuantity] = useState(1);
 
@@ -28,7 +29,7 @@ const Component = ({image, name, price, _id, addModal, addToCart}) => {
       <h4>{name}</h4>
       <h4>{price} $ </h4>
       <QuantityButton quantity={quantity} setQuantity={setQuantity} />
-      <a className={styles.cartButton} onClick={() => handleAddToCart()}>Add to Cart</a>
+      <span className={styles.cartButton} onClick={() => handleAddToCart()}>Add to Cart</span>
     </div>
   );
 };
