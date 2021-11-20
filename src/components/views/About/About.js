@@ -1,37 +1,27 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import clsx from 'clsx';
 
-// import { connect } from 'react-redux';
-// import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
+
+
+
 
 import styles from './About.module.scss';
 
-const Component = ({className, children}) => (
-  <div className={clsx(className, styles.root)}>
-    <h2>About</h2>
-    {children}
+const Component = () => (
+  <div className={styles.root}>
+    <div className={styles.banner}>
+      <h1>ELECTRIC CAR SHOP</h1>
+    </div>
+    <h2 className={styles.subTitle}>OUR MISSION</h2>
+    <h4 className={styles.text}>We created Electric Car Shop to give the industry something it desperately needed: a dedicated electric vehicle platform and community that allows consumers to learn about, buy, and sell electric vehicles in the most simplistic and user friendly manner available.</h4>
+   
+  
   </div>
 );
 
-Component.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-};
-
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
-
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
-// });
-
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
   Component as About,
-  // Container as About,
+  
   Component as AboutComponent,
 };

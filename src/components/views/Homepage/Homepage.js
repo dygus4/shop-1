@@ -29,7 +29,7 @@ const Component = ({ products, fetchProducts }) => {
       <Slider {...settings} className={styles.slider}>
         <div className={styles.imageWrapper}>
           <img  alt= '' src='https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'></img>
-          <div className={styles.title}> Electric Car </div>
+          <div className={styles.title}> Electric Drive </div>
         </div>
         <div className={styles.imageWrapper}>
           <img  alt= '' src='https://images.pexels.com/photos/9800006/pexels-photo-9800006.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'></img>
@@ -37,7 +37,7 @@ const Component = ({ products, fetchProducts }) => {
         </div>
         <div className={styles.imageWrapper}>
           <img  alt= '' src='https://images.pexels.com/photos/258083/pexels-photo-258083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'></img>
-          <div className={styles.title}> A lot of place charging</div>
+          <div className={styles.title}> A Lot Of Charging Points</div>
         </div>
         <div className={styles.imageWrapper}>
           <img  alt= '' src='https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'></img>
@@ -51,7 +51,7 @@ const Component = ({ products, fetchProducts }) => {
       <div className={styles.sliderContent}>
         <div className={styles.wrapper}>
           <div className={styles.topContent}>
-            <h1>WELCOME TO ELECTRIC CAR SHOP</h1>
+            <h1>ELECTRIC CAR SHOP</h1>
           </div>
           
         </div>
