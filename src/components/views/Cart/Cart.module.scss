@@ -1,7 +1,7 @@
 @import '../../../styles/settings.scss';
 
 .root {
-    padding-top: 130px;
+    padding-top: 100px;
     min-height: calc(100vh - 50px);
     display: flex !important;
     position: relative;
@@ -60,7 +60,7 @@
         text-align: center;
   
         .btn {
-          margin-top: 30px;
+          margin-top: 20px;
           width: 200px;
           padding: 20px 0;
           cursor: pointer;

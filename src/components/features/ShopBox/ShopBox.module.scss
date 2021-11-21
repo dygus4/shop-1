@@ -24,7 +24,7 @@
       text-align: center;
     }
     .cartButton{
-      background: $colorBlack;
+      background: $colorGreen;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -32,6 +32,9 @@
       height: 40px;
       color: $colorWhite;
       cursor: pointer;
-      margin-top: 10px;
+      
+      &:hover{
+        background: $colorActiveGreen;
+      }
     }
   }

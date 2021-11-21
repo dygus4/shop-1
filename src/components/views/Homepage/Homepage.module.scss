@@ -106,11 +106,12 @@
      
     }
     .productsWrapper {
+      margin-top: -50px;
       h1 {
         text-align: center;
         color: $colorGrey;
         font-weight: 100;
-        margin-bottom: 23px;
+        margin-bottom: 50px;
       }
       .boxesWrapper {
         display: flex;

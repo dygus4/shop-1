@@ -103,11 +103,11 @@
         }
     
         .btn:nth-of-type(2){
-          background: $colorBlack;
+          background: $colorGreen;
           color: $colorWhite;
     
           &:hover{
-            background: $colorGrey;
+            background: $colorActiveGreen;
           }
         }
         .btn:nth-of-type(1){
