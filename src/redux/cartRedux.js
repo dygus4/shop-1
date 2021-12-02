@@ -1,8 +1,5 @@
 /* eslint-disable linebreak-style */
 
-//import { API_URL } from '../config';
-//import Axios from 'axios';
-
 /* selectors */
 export const getCartData = ({ cart }) => cart;
 
@@ -29,22 +26,7 @@ export const removeFromCart = payload => ({ payload, type: REMOVE_FROM_CART });
 export const changeDescription = payload => ({ payload, type: CHANGE_DESCRIPTION });
 
 /* thunk creators */
-//export const fetchCart = () => {
-//  return (dispatch, getState) => {
-//    if (getState().products.data.length === 0) {
-//      dispatch(fetchStarted());
-//
-//      Axios
-//        .get(`${API_URL}/cart`)
-//        .then(res => {
-//          dispatch(fetchSucceed(res.data));
-//        })
-//        .catch(err => {
-//          dispatch(fetchError(err.message || true));
-//        });
-//    }
-//  };
-//};
+
 export const fetchCart = (data) => {
   return (dispatch, getState) => {
     if (getState().cart.length > 0) {

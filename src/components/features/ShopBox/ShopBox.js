@@ -6,7 +6,6 @@ import { QuantityButton } from '../../common/QuantityButton/QuantityButton';
 import { Link } from 'react-router-dom';
 import { addToCart } from '../../../redux/cartRedux';
 import { addModal } from '../../../redux/modalRedux';
-//import { Button } from '@material-ui/core';
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -43,9 +42,6 @@ Component.propTypes = {
   addModal: PropTypes.func,
 };
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
 
 const mapDispatchToProps = (dispatch, props) => ({
   addToCart: arg => dispatch(addToCart(arg)),
@@ -57,7 +53,6 @@ const Container = connect(null, mapDispatchToProps)(Component);
 
 
 export {
-  //  Component as ShopBox,
   Container as ShopBox,
   Component as ShopBoxComponent,
 };

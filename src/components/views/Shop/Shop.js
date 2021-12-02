@@ -44,7 +44,6 @@ const mapDispatchToProps = dispatch => ({
 const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  //Component as Shop,
   Container as Shop,
   Component as ShopComponent,
 };

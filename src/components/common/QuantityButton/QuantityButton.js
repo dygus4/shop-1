@@ -42,9 +42,6 @@ Component.propTypes = {
   id: PropTypes.string,
 };
 
-// const mapStateToProps = state => ({
-//   someProp: reduxSelector(state),
-// });
 
 const mapDispatchToProps = dispatch => ({
   changeQuantity: arg => dispatch(changeQuantity(arg)),
@@ -53,7 +50,7 @@ const mapDispatchToProps = dispatch => ({
 const Container = connect(null, mapDispatchToProps)(Component);
 
 export {
-  //Component as QuantityButton,
+  
   Container as QuantityButton,
   Component as QuantityButtonComponent,
 };
